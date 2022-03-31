@@ -1,0 +1,49 @@
+<app-header [title]="title"></app-header>
+
+<!-- Content for the Add_Edit page -->
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1>{{editing ? "Edit" : "Add a new"}} Item</h1>
+
+            <form novalidate #form="ngForm" (ngSubmit)="save(form)">
+                <!-- <form class="form" method="POST"> -->
+                <div class="form-group">
+                    <input type="hidden" name="id" [(ngModel)]="item._id">
+                    <label for="itemTextField">IncidentExplanation</label>
+                    <input type="text" class="form-control" id="itemTextField" placeholder="Enter the Item Name" name="item" [(ngModel)]="item.IncidentExplanation" required>
+                </div>
+                <br />
+                <div class="form-group">
+                    <label for="QtyTextField">User</label>
+                    <input type="number" class="form-control" id="QtyTextField" placeholder="00" name="qty" [(ngModel)]="item.User" required>
+                </div>
+                <br />
+                <div class="form-group">
+                    <label for="statusTextField">Department</label>
+                    <input type="text" class="form-control" id="statusTextField" placeholder="Enter a status" name="status" [(ngModel)]="item.Department">
+                </div>
+                <br />
+                <div class="form-group">
+                    <label for="tagTextArea">Solved</label>
+                    <textarea type="text" class="form-control" id="tagTextArea" placeholder="Enter the tags of the item" name="tags" [(ngModel)]="item.Solved">                    
+                    </textarea>
+                </div>
+                <br/>
+
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"></i> 
+                    Submit
+                </button>
+
+                <a routerLink="/inventory/list" class="btn btn-warning">
+                    <i class="fas fa-undo"></i> Cancel
+                </a>
+
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<app-footer></app-footer>

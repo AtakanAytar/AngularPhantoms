@@ -15,10 +15,10 @@
             <a *ngIf="title == 'Incident List' || title == 'Add a new Item'; else deactiveList" class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Incident</a>
 
             <ng-template #deactiveList>
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Inventory</a>
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Incident</a>
             </ng-template>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="/incident/list">Inventory List</a></li>
+                <li><a class="dropdown-item" href="/incident/list">Incident List</a></li>
                 <li><a class="dropdown-item" href="/incident/add">Add a new Item</a></li>
             </ul>
         </li>
