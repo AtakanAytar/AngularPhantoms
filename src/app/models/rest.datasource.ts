@@ -19,4 +19,6 @@ export class RestDataSource {
     getIncidentList(): Observable<Incident[]> {
         return this.http.get<Incident[]>(this.baseUrl + "incident/list");
     }
+
+    
 }

@@ -21,4 +21,5 @@ export class IncidentRepository {
         return (this.incident.find(item => item._id === id)!);
     }
 
+    
 }
