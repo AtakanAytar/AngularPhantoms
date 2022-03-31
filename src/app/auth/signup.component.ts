@@ -18,9 +18,11 @@ export class SignUpComponent {
         private auth: AuthService) { }
 
     signup(form: NgForm) {
+      console.log(form);
         if (form.valid) {
             // Checks if the passwords match.
-            if(this.user.password == this.confirmPassword){
+            // if(this.user.password == this.confirmPassword){
+              if(this.user.password){
                 this.auth.signupUser(this.user)
                     .subscribe(response => {
                         console.log(response);
