@@ -39,6 +39,10 @@
             <i class="fas fa-user"></i> Users </a>
 
       </li>
+      <li>
+        <a *ngIf="auth.username != null" class="nav-link" routerLink="" (click)="logout()">Sign Out ({{ auth.username }})</a>
+        <a *ngIf="auth.username == null" class="nav-link" routerLink="/users/signin">Signin</a>
+      </li>
 
 
     </ul>

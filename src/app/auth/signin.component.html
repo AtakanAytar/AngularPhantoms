@@ -1,0 +1,63 @@
+<!-- COMP229-002
+Professor: Julio Vinicius A de Carvalho
+PHANTOMS PROJECT
+Author: Christopher Chantres
+Date: March 25th, 2022 -->
+
+<!-- Header -->
+<div class="d-flex flex-row bd-highlight mb-3 flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
+  <div class="p-2 bd-highlight">
+    <img src="assets/images/logo.png" alt="logo" style="width:60px;">
+  </div>
+  <div class="p-2 bd-highlight text-white mb-3 mb-md-0 font-weight-bolder" >
+    <h1 class="fa-solid fa-hammer" >
+      PHANTOMS Bug Tickets
+    </h1>
+  </div>
+  <div class="text-white mb-3 mb-md-0">
+    COMP229-002
+  </div>
+    <h1>{{  title }}</h1>
+    <div class="bg-danger mt-2 p-2 text-center text-white" *ngIf="message != null">
+      {{message}}
+</div>
+</div>
+
+<br><br><br>
+<!-- Form Section -->
+<div class="bg-info p-2 text-center text-white">
+  <h3>SportsStore Admin</h3>
+</div>
+<!-- <div class="bg-danger mt-2 p-2 text-center text-white" *ngIf="errorMessage != null">
+  {{errorMessage}}
+</div> -->
+<div class="p-2">
+  <form novalidate #form="ngForm" (ngSubmit)="authenticate(form)">
+    <div class="form-group">
+      <label>Name</label>
+      <input class="form-control" name="username" [(ngModel)]="username" required />
+    </div>
+    <div class="form-group">
+      <label>Password</label>
+      <input class="form-control" type="password" name="password" [(ngModel)]="password" required />
+    </div>
+    <div class="text-center">
+      <button class="btn btn-secondary m-1" routerLink="/">Go back</button>
+      <button class="btn btn-primary m-1" type="submit">
+
+        <a href="/users/signup" style="text-decoration: none">
+          <i class="fas fa-user-plus"></i>
+          Sign-up
+      </a>
+      </button>
+    </div>
+  </form>
+</div>
+    <!-- Footer -->
+    <div class="text-white mb-3 mb-md-0 text-center">
+      <h6 class="fa-solid fa-hammer" >
+        PHANTOMS Bug Tickets
+      </h6>
+      Copyright © 2020. All rights reserved.
+    </div>
+

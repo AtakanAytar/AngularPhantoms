@@ -5,13 +5,14 @@ import { RouterModule } from '@angular/router';
 
 import { IndexComponent } from './index.component';
 import { PartialsModule } from './partials/partials.module';
-import { LoginComponent } from '../auth/components/login/login.component';
+
 
 
 @NgModule({
   imports: [BrowserModule,
      FormsModule,
       PartialsModule,
+
        RouterModule],
 
   declarations: [

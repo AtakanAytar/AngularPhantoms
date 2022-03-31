@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './header.component';
 import { FooterComponent } from '../partials/footer.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [BrowserModule,
-        FormsModule],
+        FormsModule,
+        RouterModule],
   declarations: [
         HeaderComponent,
         FooterComponent

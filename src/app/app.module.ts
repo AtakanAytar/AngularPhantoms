@@ -5,7 +5,8 @@ import { RouterModule } from "@angular/router";
 import { AppComponent } from './app.component';
 import { IndexModule } from './components/index.module';
 import { IndexComponent } from './components/index.component';
-import { LoginComponent } from './auth/components/login/login.component';
+import { SignInComponent } from './auth/signin.component';
+import { AuthModule } from './auth/auth.module';
 
 
 @NgModule({
@@ -15,14 +16,18 @@ import { LoginComponent } from './auth/components/login/login.component';
   imports: [
     BrowserModule,
     IndexModule,
+    AuthModule,
     RouterModule.forRoot([
       { path: "", component: IndexComponent },
-      { path: "auth/login", component: LoginComponent },
+      { path: "users/signin", component: SignInComponent },
+      // { path: "users/signup", component: SignUpComponent },
       { path: "**", redirectTo: "" }
     ])
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
-
 export class AppModule { }
+
+
