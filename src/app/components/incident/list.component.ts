@@ -16,7 +16,7 @@ export class ListComponent {
         private router: Router) 
     { }
 
-    get inventoryList(): Incident[] {
+    get incidentList(): Incident[] {
         return this.repository.getIncident();        
     }
     
