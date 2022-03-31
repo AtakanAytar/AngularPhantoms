@@ -8,10 +8,10 @@ import { AuthService } from "../model/auth.service";
 })
 
 export class SignInComponent {
-    public title: string = "Signin";
-    public username: string ="";
-    public password: string ="";
-    public message: string ="";
+    public title: string = "Sign";
+    public username: string = "";
+    public password: string = "" ;
+    public message: string | undefined = '';
 
     constructor(private router: Router,
         private auth: AuthService) { }

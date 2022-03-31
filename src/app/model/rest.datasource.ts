@@ -6,14 +6,14 @@ import { User } from "./user.model";
 import { map, catchError } from "rxjs/operators";
 import { ResponseModel } from "./response.model";
 
-const PROTOCOL = "http";
-const PORT = 3000;
+// const PROTOCOL = "http";
+// const PORT = 3000;
 
 @Injectable()
 export class RestDataSource {
 
     baseUrl: string;
-    auth_token: string;
+    auth_token: string | undefined = ''
 
     constructor(private http: HttpClient) {
         this.baseUrl = 'https://phantomwebproject.herokuapp.com/';

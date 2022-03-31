@@ -8,8 +8,8 @@ import { ResponseModel } from "./response.model";
 @Injectable()
 export class AuthService {
 
-    public username: string;
-    private _redirectUrl: string;
+    public username: string | undefined = '';
+    private _redirectUrl: string | undefined = '';
 
     constructor(private datasource: RestDataSource) { }
 
@@ -33,15 +33,15 @@ export class AuthService {
     }
 
     clear() {
-        this.username = null;
-        this.datasource.auth_token = null;
+        this.username = '';
+        this.datasource.auth_token = '';
     }
 
-    get redirectUrl(): string{
-        let result = this._redirectUrl;
-        this._redirectUrl = null;
-        return result;
-    }
+    // get redirectUrl(): string{
+    //     let result = this._redirectUrl;
+    //     this._redirectUrl = '';
+    //     return result;
+    // }
 
     set redirectUrl(url: string){
         this._redirectUrl = url;

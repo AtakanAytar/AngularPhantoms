@@ -11,8 +11,8 @@ import { User } from "../model/user.model";
 export class SignUpComponent {
 
     public user: User = new User();
-    public confirmPassword = new User();
-    public message: string;
+    public confirmPassword = '';
+    public message: string |undefined = '';
 
     constructor(private router: Router,
         private auth: AuthService) { }

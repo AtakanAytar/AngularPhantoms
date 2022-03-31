@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { IndexModule } from './components/index.module';
 import { IndexComponent } from './components/index.component';
 import { SignInComponent } from './auth/signin.component';
+import { SignUpComponent } from './auth/signup.component';
 import { AuthModule } from './auth/auth.module';
 
 
@@ -20,7 +21,7 @@ import { AuthModule } from './auth/auth.module';
     RouterModule.forRoot([
       { path: "", component: IndexComponent },
       { path: "users/signin", component: SignInComponent },
-      // { path: "users/signup", component: SignUpComponent },
+      { path: "users/signup", component: SignUpComponent },
       { path: "**", redirectTo: "" }
     ])
   ],
