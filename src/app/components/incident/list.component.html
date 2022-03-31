@@ -1,0 +1,47 @@
+<app-header [title]="title"></app-header>
+
+<main class="container">
+    <div class="row">
+        <!-- <h1><%= title %></h1> -->
+        <h1>{{ title }}</h1>
+        <br>
+        <div>
+            <a href="/incident/add" class="btn btn-primary align-self-end" role="button">
+                <i class="fas fa-plus-circle"></i> Add a new Item
+            </a>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped table-hover">
+                <!-- Header Row-->
+                <tr>
+                    <th class="text-center">IncidentExplanation</th>
+                    <th class="text-center">User</th>
+                    <th class="text-center">Department</th>
+                    <th class="text-center">Solved</th>
+
+                    <th class="text-center" colspan="2">Actions</th>
+                </tr>
+
+                <!-- Repeatable Template Row -->
+
+                <tr *ngFor="let item of incidentList">
+                    <td class="text-center"> {{ item.IncidentExplanation}} </td>
+                    <td class="text-center"> {{ item.User }} </td>
+                    <td class="text-center"> {{ item.Department }} </td>
+                    <td class="text-center">{{ item.Solved}}</td>
+                    <td class="text-center">
+                        <button class="btn bg-primary btn-primary btn-sm">
+                            <i class="fas fa-pencil-alt" ></i></button>
+                    </td>
+                    <td class="text-center">
+                        <a class="btn bg-danger btn-danger btn-sm">
+                            <i class="fas fa-trash-alt"></i></a>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+</main>
+
+<app-footer></app-footer>
