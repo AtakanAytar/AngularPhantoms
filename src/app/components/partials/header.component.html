@@ -11,23 +11,15 @@
                 <i class="fas fa-home"></i> Home {{ title }}
             </a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" [class.active]="title == 'Projects'" href="/projects">
-                <i class="fas fa-project-diagram"></i> Projects </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/about">
-                <i class="fas fa-home"></i> About </a>
-        </li>
         <li class="nav-item dropdown">
-            <a *ngIf="title == 'Inventory List' || title == 'Add a new Item'; else deactiveList" class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Inventory</a>
+            <a *ngIf="title == 'Incident List' || title == 'Add a new Item'; else deactiveList" class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Incident</a>
 
             <ng-template #deactiveList>
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Inventory</a>
             </ng-template>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="/inventory/list">Inventory List</a></li>
-                <li><a class="dropdown-item" href="/inventory/add">Add a new Item</a></li>
+                <li><a class="dropdown-item" href="/incident/list">Inventory List</a></li>
+                <li><a class="dropdown-item" href="/incident/add">Add a new Item</a></li>
             </ul>
         </li>
         <li class="nav-item">
