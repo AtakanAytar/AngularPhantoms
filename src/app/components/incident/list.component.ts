@@ -4,13 +4,13 @@ import { Incident } from "../../models/incident.model";
 import { IncidentRepository } from "../../models/incident.repository";
 
 @Component({
-    selector: "list-inventory",
+    selector: "list-incident",
     templateUrl: "list.component.html"
 })
 
 export class ListComponent {
 
-    title = 'Inventory List';
+    title = 'Incident List';
 
     constructor(private repository: IncidentRepository,
         private router: Router) 
