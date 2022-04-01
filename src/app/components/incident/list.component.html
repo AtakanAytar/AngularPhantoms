@@ -30,11 +30,11 @@
                     <td class="text-center"> {{ item.Department }} </td>
                     <td class="text-center">{{ item.Solved}}</td>
                     <td class="text-center">
-                        <button class="btn bg-primary btn-primary btn-sm">
-                            <i class="fas fa-pencil-alt" ></i></button>
+                        <button [routerLink]="['/incident/edit/', item._id]" class="btn bg-primary btn-primary btn-sm">
+                                <i class="fas fa-pencil-alt" ></i></button>
                     </td>
                     <td class="text-center">
-                        <a class="btn bg-danger btn-danger btn-sm">
+                        <a (click)="deleteMethod(item._id)" class="btn bg-danger btn-danger btn-sm">
                             <i class="fas fa-trash-alt"></i></a>
                     </td>
                 </tr>
