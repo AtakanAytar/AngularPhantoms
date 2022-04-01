@@ -4,11 +4,13 @@ import { FormsModule } from "@angular/forms";
 import { ModelModule } from "../../models/model.module";
 import { PartialsModule } from '../partials/partials.module';
 import { ListComponent } from "./list.component";
+import { RouterModule } from "@angular/router";
+import { AddEditComponent } from "./add_edit.component";
 
 @NgModule({
-    imports: [ModelModule, BrowserModule, FormsModule, PartialsModule],
-    declarations: [ListComponent ],
-    exports : [ListComponent]
+    imports: [ModelModule, BrowserModule, FormsModule, RouterModule,PartialsModule],
+    declarations: [ListComponent,AddEditComponent  ],
+    exports : [ListComponent,AddEditComponent ]
 })
 
 export class IncidentModule {}

@@ -35,12 +35,12 @@ export class AddEditComponent {
 
     save(form: NgForm) {
         this.repository.saveIncident(this.item);
-        this.router.navigateByUrl("inventory/list");                
+        this.router.navigateByUrl("incident/list");                
     }
 
     private deleteItem(id: string){
         this.repository.deleteIncident(id);
-        this.router.navigateByUrl("inventory/list");
+        this.router.navigateByUrl("incident/list");
     }
     
 }

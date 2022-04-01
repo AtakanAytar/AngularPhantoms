@@ -19,5 +19,10 @@ export class ListComponent {
     get incidentList(): Incident[] {
         return this.repository.getIncident();        
     }
+    deleteMethod(id: string) {
+        if(confirm("Are you sure do you want to delete?")) {
+            this.router.navigateByUrl("incident/delete/"+id);
+        }
+    }
     
 }
