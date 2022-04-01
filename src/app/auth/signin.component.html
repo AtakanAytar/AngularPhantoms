@@ -42,14 +42,25 @@ Date: March 25th, 2022 -->
       <input class="form-control" type="password" name="password" [(ngModel)]="password" required />
     </div>
     <div class="text-center">
-      <button class="btn btn-secondary m-1" routerLink="/">Go back</button>
-      <button class="btn btn-primary m-1" type="submit">
-
+      <div class="form-group">
+        <input class="btn btn-primary" type="submit" value="Sign In" />
+    </div>
+    <br>
+    <div class="form-group">
         <a href="/users/signup" style="text-decoration: none">
+            <i class="fas fa-user-plus"></i>
+            Sign-up
+        </a>
+    </div>
+
+      <!-- <button class="btn btn-secondary m-1" routerLink="/">Go back</button>
+      <button class="btn btn-primary m-1" type="submit"> -->
+
+        <!-- <a href="/users/signup" style="text-decoration: none">
           <i class="fas fa-user-plus"></i>
           Sign-up
-      </a>
-      </button>
+      </a> -->
+      <!-- </button> -->
     </div>
   </form>
 </div>
