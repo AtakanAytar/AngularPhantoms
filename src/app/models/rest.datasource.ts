@@ -6,6 +6,7 @@ import { map, catchError } from "rxjs/operators";
 import { HttpHeaders } from '@angular/common/http';
 import { User } from "./user.model";
 import { ResponseModel } from "./response.model";
+import { environment } from "src/environments/environment";
 
 const PROTOCOL = "http";
 const PORT = 3000;
@@ -17,8 +18,8 @@ export class RestDataSource {
     auth_token: string;
 
     constructor(private http: HttpClient) {
-       
-        this.baseUrl = `${PROTOCOL}://${location.hostname}:${PORT}/`;
+        this.baseUrl = environment.apiurl;
+       // this.baseUrl = `${PROTOCOL}://${location.hostname}:${PORT}/`;
     }
 
     getIncidentList(): Observable<Incident[]> {
