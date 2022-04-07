@@ -8,8 +8,8 @@ import { User } from "./user.model";
 import { ResponseModel } from "./response.model";
 import { environment } from "src/environments/environment";
 
-const PROTOCOL = "http";
-const PORT = 3000;
+// const PROTOCOL = "http";
+// const PORT = 3000;
 
 @Injectable()
 export class RestDataSource {
@@ -19,11 +19,13 @@ export class RestDataSource {
 
     constructor(private http: HttpClient) {
         this.baseUrl = environment.apiurl;
+         // this.baseUrl = `${PROTOCOL}://${location.hostname}:${PORT}/`;
      
     }
 
     getIncidentList(): Observable<Incident[]> {
         return this.http.get<Incident[]>(this.baseUrl + "incident/list");
+
     }
 
     insertIncident(item: Incident): Observable<Incident> {
