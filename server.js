@@ -11,12 +11,12 @@ app.use(cors());
 app.options('*', cors());
 
 // Static Folder
-app.use(express.static(__dirname + '/dist/inventory-frontend')); 
+app.use(express.static(__dirname + '/dist/phantoms-frontend'));
 
 // Sets the router
-app.get('/*', function (req, res) { 
-    res.sendFile(path.join(__dirname + '/dist/inventory-frontend/')); 
-}); 
+app.get('/*', function(req, res) {
+    res.sendFile(path.join(__dirname + '/dist/phantoms-frontend/'));
+});
 
 app.listen(process.env.PORT || 8080, () => {
     console.log(`====> Angular app is running.`)
