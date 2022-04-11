@@ -17,11 +17,15 @@
         <li class="nav-item dropdown">
             <a *ngIf="title == 'Incident List' || title == 'Add a new Item'; else deactiveList" class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Incident</a>
             <ng-template #deactiveList>
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Inventory</a>
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"><i class="fa-solid fa-triangle-exclamation"></i>Incident</a>
             </ng-template>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" routerLink="/incident/list">Incident List</a></li>
-                <li><a class="dropdown-item" routerLink="/incident/add">Add a new Item</a></li>
+                <li><a class="dropdown-item" routerLink="/incident/list"><i class="fa-solid fa-list"></i>
+
+                    Incident List</a></li>
+                <li><a class="dropdown-item" routerLink="/incident/add"><i class="fa-solid fa-plus"></i>
+
+                    Add a new Item</a></li>
             </ul>
         </li>
 
@@ -29,8 +33,9 @@
 
 
         <li class="nav-item">
-            <a *ngIf="auth.username != null" class="nav-link" routerLink="" (click)="logout()">Sign Out ({{ auth.username }})</a>
-            <a *ngIf="auth.username == null" class="nav-link" routerLink="/users/signin">Signin</a>
+            <a *ngIf="auth.username != null" class="nav-link" routerLink="" (click)="logout()"><i class="fas fa-user"></i>Sign Out ({{ auth.username }})></a>
+            <a *ngIf="auth.username == null" class="nav-link" routerLink="/users/signin"><i class="fas fa-user"></i> Signin           
+            </a>
         </li>
 
 
