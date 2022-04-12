@@ -20,7 +20,7 @@ export class RestDataSource {
     constructor(private http: HttpClient) {
         this.baseUrl = environment.apiurl;
          // this.baseUrl = `${PROTOCOL}://${location.hostname}:${PORT}/`;
-     
+
     }
 
     getIncidentList(): Observable<Incident[]> {
