@@ -1,15 +1,41 @@
 <app-header [title]="title"></app-header>
 
+
 <main class="container">
     <div class="row">
         <h1>{{ title }}</h1>
         <br>
+
         <div>
             <a href="/incident/add" class="btn btn-primary align-self-end" role="button">
                 <i class="fas fa-plus-circle"></i> Add a new Item
             </a>
         </div>
 
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search Incident Status ...">
+        <script>
+            function myFunction() {
+                // 声明变量
+                var input, filter, table, tr, td, i;
+                input = document.getElementById("myInput");
+                filter = input.value.toUpperCase();
+                table = document.getElementById("myTable");
+                tr = table.getElementsByTagName("tr");
+               
+                // 循环表格每一行，查找匹配项
+                for (i = 0; i < tr.length; i++) {
+                  td = tr[i].getElementsByTagName("td")[0];
+                  if (td) {
+                    if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                      tr[i].style.display = "";
+                    } else {
+                      tr[i].style.display = "none";
+                    }
+                  } 
+                }
+              }
+        </script>
+        
         <div class="table-responsive">
             <table class="table table-bordered table-striped table-hover">
                 <!-- Header Row-->
